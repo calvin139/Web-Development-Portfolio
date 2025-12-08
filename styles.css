@@ -1200,6 +1200,24 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    .intro-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        margin-top: -50px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .avatar-container {
+        position: static;
+        margin: 0 auto 2rem;
+        width: 100%;
+        max-width: 400px;
+    }
+    
     .contact-container {
         gap: 2.5rem;
     }
@@ -1210,6 +1228,82 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-section {
+        height: 300px;
+        margin-top: 80px;
+    }
+    
+    .hero-overlay h1,
+    .hero-overlay .portfolio-title,
+    .hero-overlay .contact-title {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    .intro-box {
+        padding: 2rem;
+        margin-top: -30px;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-image {
+        height: 250px;
+    }
+    
+    .journey-background {
+        width: 400%; 
+        animation: scrollJourney 90s linear infinite; 
+    }
+    
+    .journey-background .journey-image {
+        width: 20%;
+    }
+    
+    .avatar-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .overview-grid,
+    .interests-grid,
+    .categories,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-section {
+        padding: 0 1.5rem;
+    }
+
     .contact-title {
         font-size: 2.5rem;
     }
@@ -1244,7 +1338,8 @@ footer {
     }
     
     .form-buttons {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
     }
     
@@ -1270,8 +1365,68 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .navbar {
+        padding: 0.6rem 0.8rem;
+        height: auto;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-links a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .hero-section {
+        height: 250px;
+        margin-top: 90px;
+    }
+    
+    .hero-overlay h1,
+    .hero-overlay .portfolio-title,
+    .hero-overlay .contact-title {
+        font-size: 2rem;
+    }
+    
+    .intro-box {
+        padding: 1.5rem;
+        margin-top: -20px;
+        gap: 1.5rem;
+    }
+    
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .intro-image {
+        height: 200px;
+    }
+    
+    .intro-text p {
+        font-size: 1rem;
+    }
+    
+    .avatar-container {
+        padding: 1.5rem;
+    }
+    
+    .avatar-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .name-tag {
+        font-size: 1.6rem;
+    }
+    
     .contact-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .contact-intro h2 {
@@ -1288,7 +1443,7 @@ footer {
     .info-header h3,
     .form-header h3,
     .additional-info h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     
     .contact-social .social-link {
@@ -1303,231 +1458,91 @@ footer {
     
     .btn-submit,
     .btn-clear {
-        padding: 1.2rem 2rem;
+        padding: 1.2rem 1.5rem;
         font-size: 1.1rem;
     }
     
     .form-group input,
     .form-group textarea,
     .form-group select {
-        padding: 1rem 1.2rem;
+        padding: 1rem;
         font-size: 1rem;
     }
-
-}
-
-/*testing */
-@media (max-width: 768px) {
-    /* 基础调整 */
-    body {
-        overflow-x: hidden;
-    }
     
-    /* 导航栏 */
-    .navbar {
-        padding: 0.8rem 1rem;
-        height: auto;
-        flex-wrap: wrap;
-    }
-    
-    .logo {
-        font-size: 1.4rem;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-    
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        gap: 0.8rem;
-        flex-wrap: wrap;
-    }
-    
-    .nav-links a {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Hero区域 */
-    .hero-section {
-        height: 300px;
-        margin-top: 90px;
-    }
-    
-    .contact-title,
-    .portfolio-title {
-        font-size: 2.2rem;
-        padding: 0 1rem;
-    }
-    
-    /* 内容区域 */
     .content-section {
         padding: 0 1rem;
     }
     
-    /* 首页 */
-    .intro-box {
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 2rem;
-        margin-top: -50px;
-    }
-    
-    .intro-text h1 {
-        font-size: 1.8rem;
-    }
-    
-    .intro-image {
-        height: 250px;
-        width: 100%;
-    }
-    
-    /* 关于页面 */
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .avatar-container {
-        position: static;
-        width: 100%;
-        flex: 0 0 auto;
-        margin-bottom: 2rem;
-    }
-    
-    .avatar-image {
-        width: 150px;
-        height: 150px;
-    }
-    
-    /* 滚动背景调整 */
-    .journey-background {
-        width: 400%;
-    }
-    
-    .journey-background .journey-image {
-        width: 20%;
-    }
-    
-    /* 兴趣网格 */
-    .interests-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* 作品集 */
-    .categories {
-        grid-template-columns: 1fr;
-    }
-    
-    /* 联系页面 */
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-info,
-    .contact-form {
+    .info-card {
         padding: 1.5rem;
     }
     
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .skill-name {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
     }
     
-    .checkbox-group {
-        grid-template-columns: 1fr;
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -26px;
+    }
+    
+    .category {
+        margin-bottom: 1.5rem;
+    }
+    
+    .category-slideshow {
+        height: 200px;
     }
 }
 
-/* 小屏幕手机 */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .hero-section {
-        height: 250px;
-        margin-top: 100px;
+        height: 220px;
     }
     
-    .contact-title,
-    .portfolio-title {
-        font-size: 1.8rem;
-    }
-    
-    .navbar {
-        padding: 0.6rem 0.8rem;
-    }
-    
-    .logo {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links {
-        gap: 0.5rem;
-    }
-    
-    .nav-links a {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.8rem;
+    .hero-overlay h1,
+    .hero-overlay .portfolio-title,
+    .hero-overlay .contact-title {
+        font-size: 1.7rem;
     }
     
     .intro-box {
         padding: 1rem;
-        margin-top: -30px;
     }
     
     .intro-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
-    .intro-image {
-        height: 200px;
+    .logo {
+        font-size: 1.1rem;
     }
     
-    /* 表单按钮 */
-    .form-buttons {
-        flex-direction: column;
-        gap: 1rem;
+    .contact-title {
+        font-size: 1.7rem;
     }
     
-    .btn-submit,
-    .btn-clear {
-        width: 100%;
-        padding: 1rem 1.5rem;
-    }
-    
-    .btn-submit {
-        order: 2; /* 提交按钮在下面 */
-    }
-    
-    .btn-clear {
-        order: 1; /* 清除按钮在上面 */
-    }
-    
-    /* 星星评级 */
-    .stars-rating label {
-        font-size: 1.5rem;
+    .portfolio-title {
+        font-size: 1.7rem;
     }
 }
 
-/* 横向手机屏幕 */
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-height: 500px) and (orientation: landscape) {
     .hero-section {
         height: 200px;
+        margin-top: 70px;
     }
     
     .intro-box {
-        margin-top: -30px;
-    }
-    
-    .avatar-container {
-        position: sticky;
-        top: 80px;
-        width: 40%;
-        float: left;
-        margin-right: 1rem;
-    }
-    
-    .info-sections {
-        width: 55%;
-        float: right;
+        margin-top: -20px;
     }
 }
